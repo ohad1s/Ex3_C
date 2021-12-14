@@ -85,8 +85,9 @@ void funcB(char* word, char* txt){
             int counter=0;
             int word_index=0;
             for (int j=index; j<index+strlen(word); j++){
-                if (txt[index]== atbash_char(word[word_index])){
+                if (txt[j]== atbash_char(word[word_index])){
                     counter++;
+                    word_index++;
                 }
             }
             if (counter== strlen(word)){
@@ -103,8 +104,9 @@ void funcB(char* word, char* txt){
             int counter=0;
             int word_index=0;
             for (int j=index; j<index+strlen(rev); j++){
-                if (txt[index]== atbash_char(rev[word_index])){
+                if (txt[j]== atbash_char(rev[word_index])){
                     counter++;
+                    word_index++;
                 }
             }
             if (counter== strlen(rev)){
