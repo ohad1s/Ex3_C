@@ -42,6 +42,7 @@ void funcA(char* word, char* txt){
                         printf("%c",txt[k]);
                     }
                     snake_flag++;
+                    break;
                 }
                 else if (temp_sum<word_val){
                     continue;
