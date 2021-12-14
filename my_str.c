@@ -27,12 +27,11 @@ int calc_word_val(char* word){
 
 void funcA(char* word, char* txt){
     int word_val= calc_word_val(word);
-    int index=0;
     int snake_flag=0;
-    while (txt[index]!='\0'){
+    for (int index=0; index<= strlen(txt);index++){
         if ((txt[index]<='z' && txt[index]>='a') || (txt[index]<='Z' && txt[index]>='A') ){
             int temp_sum=0;
-            for (int j=index; txt[j]!='\0'; j++){
+            for (int j=index; j<= strlen(txt); j++){
                 temp_sum+= gimatry_char(txt[j]);
                 if (temp_sum==word_val){
                     if (snake_flag!=0){
@@ -51,7 +50,6 @@ void funcA(char* word, char* txt){
                 }
             }
         }
-        index++;
     }
 }
 
