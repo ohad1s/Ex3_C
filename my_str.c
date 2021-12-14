@@ -166,29 +166,32 @@ void funcC(char* word, char* txt){
     char word_sorted[strlen(word)];
     strcpy(word_sorted, word);
     bubbleSort(word_sorted, strlen(word_sorted));
-    for (int i=0; i<= strlen(txt); i++){
-        for (int j=i; j<= strlen(txt); j++){
-            int len=j-i+1;
-            char word_to_check[len+1];
-            int counter=0;
-            for (int t=i; t<j; t++){
-                word_to_check[counter]=txt[t];
-                counter++;
-            }
-            word_to_check[counter]='\0';
-            char word_to_check_copy[strlen(word_to_check)];
-            strcpy(word_to_check_copy,word_to_check);
-            bubbleSort(word_to_check_copy, strlen(word_to_check_copy));
-            remove_char_from_string(word_to_check_copy, ' ');
-            int comp=  strcmp(word_to_check_copy,word_sorted);
-            if (comp==0){
-                if (snake_flag!=0){
-                    printf("~");
+    for (int i=0; i<= strlen(txt); i++) {
+        if ((txt[i]<='z' && txt[i]>='a') || (txt[i]<='Z' && txt[i]>='A') ){
+            for (int j = i; j <= strlen(txt); j++) {
+                int len = j - i + 1;
+                char word_to_check[len + 1];
+                int counter = 0;
+                for (int t = i; t < j; t++) {
+                    word_to_check[counter] = txt[t];
+                    counter++;
                 }
-                for (int k=0; k< strlen(word_to_check); k++){
-                    printf("%c",word_to_check[k]);
+                word_to_check[counter] = '\0';
+                char word_to_check_copy[strlen(word_to_check)];
+                strcpy(word_to_check_copy, word_to_check);
+                bubbleSort(word_to_check_copy, strlen(word_to_check_copy));
+                remove_char_from_string(word_to_check_copy, ' ');
+                int comp = strcmp(word_to_check_copy, word_sorted);
+                if (comp == 0) {
+                    if (snake_flag != 0) {
+                        printf("~");
+                    }
+                    for (int k = 0; k < strlen(word_to_check); k++) {
+                        printf("%c", word_to_check[k]);
+                    }
+                    snake_flag++;
+                    break;
                 }
-                snake_flag++;
             }
         }
     }
