@@ -16,6 +16,7 @@ int main() {
         ch = getchar();
         counter_letter_text++;
     }
+    TXT[counter_letter_text]='\0';
     printf("Gematria Sequences: ");
     funcA(word,TXT);
     printf("\n");
