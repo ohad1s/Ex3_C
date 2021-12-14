@@ -1,9 +1,8 @@
-//
-// Created by shira on 13/12/2021.
-//
+//------------------------------
+// Created by Ohad Shirazi on 13/12/2021.
+//------------------------------
 #ifndef EX3_MY_STR_H
 #define EX3_MY_STR_H
-
 #endif //EX3_MY_STR_H
 
 int gimatry_char(char c);

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 //--------------------------------
-// Created by shira on 13/12/2021.
+// Created by Ohad Shirazi on 13/12/2021.
 //--------------------------------
 
 int gimatry_char(char c){
