@@ -6,7 +6,15 @@ int main() {
     char TXT[1024];
     char word[30];
     printf("pleae enter your word\n");
-    scanf("%s", word);
+    int letter_in_word=0;
+    char ch2;
+    ch2= getchar();
+    while (ch2!=' ' && ch2!='\t' && ch2!='\n'){
+        word[letter_in_word]=ch2;
+        ch2=getchar();
+        letter_in_word++;
+    }
+    word[letter_in_word]='\0';
     printf("pleae enter your text\n");
     int counter_letter_text=0;
     char ch;
