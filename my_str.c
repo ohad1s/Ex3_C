@@ -74,13 +74,14 @@ char atbash_char(char c){
 }
 
 void funcB(char* word, char* txt){
-    char rev[strlen(word)];
+    char rev[strlen(word)+1];
     int j=strlen(word)-1;
     for (int i = 0; i < strlen(word); i++)
     {
         rev[i] = word[j];
         j--;
     }
+    rev[strlen(word)]='\0';
     int index=0;
     int snake_flag=0;
     while (txt[index]!='\0'){
