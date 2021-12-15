@@ -33,6 +33,5 @@ int main() {
     printf("\n");
     printf("Anagram Sequences: ");
     funcC(word,TXT);
-    printf("\n");
     return 0;
 }
