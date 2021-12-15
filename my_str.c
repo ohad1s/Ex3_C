@@ -167,7 +167,7 @@ void funcC(char* word, char* txt){
     strcpy(word_sorted, word);
     bubbleSort(word_sorted, strlen(word_sorted));
     for (int i=0; i<= strlen(txt); i++) {
-        if ((txt[i]<='z' && txt[i]>='a') || (txt[i]<='Z' && txt[i]>='A') ){
+        if ((txt[i]!=' ') ){
             for (int j = i; j <= strlen(txt); j++) {
                 int len = j - i + 1;
                 char word_to_check[len + 1];
